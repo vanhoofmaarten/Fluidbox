@@ -285,9 +285,9 @@
 
 			// Check if Fluidbox:
 			// 1. Is an anchor element ,<a>
-			// 2. Contains one and ONLY one child
-			// 3. The only child is an image element, <img>
-			if($(this).is('a') && $(this).children().length === 1 && $(this).children().is('img')) {
+			// 2. Contains one and ONLY one child -> Doensn't work with picture-element!
+			// 3. The has a child that is an image element, <img>
+			if($(this).is('a') && $(this).find('img')) {
 
 				// Define wrap
 				var $fbInnerWrap = $('<div />', {
